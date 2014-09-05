@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cd lib
+if [[ $LD_LIBRARY_PATH == "" ]]
+then
+	export LD_LIBRARY_PATH=$(pwd):$LD_LIBRARY_PATH
+fi
+cd ..
+
+./"$1"/"$1".bin
